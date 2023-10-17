@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpg'); /* Specify the path to your background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-repeat: no-repeat;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: lightblue; /* Change header background color to light blue */
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            flex: 1;
+        }
+
+        .logo img {
+            max-width: 100px; /* Adjust the max width for the logo (e.g., 100px) */
+            height: auto;
+        }
+
+        .menu {
+            flex: 1;
+            text-align: right;
+            color: #fff;
+        }
+
+        .content-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-block {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+            background-color: #e0e0e0; /* Background color for odd blocks */
+        }
+
+        .content-block:nth-child(even) {
+            background-color: #f0f0f0; /* Background color for even blocks */
+        }
+
+        .block-image {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .block-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .block-text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .block-image:nth-child(even) {
+            order: 2; /* Move even block images to the right side */
+        }
+
+        .block-text:nth-child(even) {
+            order: 1; /* Move even block text to the left side */
+        }
+
+        .footer {
+            background-color: lightblue; /* Change footer background color to light blue */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .reveal-button {
+            background-color: lightblue ; /* Change the button color to dark yellow */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px auto; /* Center the button horizontally */
+            display: block; /* Make the button a block-level element */
+            cursor: pointer;
+        }
+
+        #phone-number {
+            display: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="https://papik.pro/uploads/posts/2022-01/1643605452_1-papik-pro-p-logotip-turagentstva-1.png" alt="Logo">
+        </div>
+        <div class="menu">
+            <ul>
+                
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+     </div>
+    <section class="content-section">
+        <div class="content-block">
+            <div class="block-image">
+                <img src="https://all.accor.com/magazine/imagerie/1-34bc.jpg" alt="Image 1">
+            </div>
+            <div class="block-text">
+                <h2>Туры в Дубай</h2>
+                <p>Отправьтесь в волшебное приключение в Дубаи и погрузитесь в мир роскоши, сказочных пляжей и захватывающих развлечений с нашими незабываемыми турами!</p>
+            </div>
+        </div>
+        <div class="content-block">
+            <div class="block-text">
+                <h2>Туры в Турцию</h2>
+                <p>Откройте для себя великолепие Турции с нашими турами: невероятные пляжи, богатая история и гостеприимство ждут вас!</p>
+            </div>
+            <div class="block-image">
+                <img src="https://cdn2.tu-tu.ru/image/pagetree_node_data/1/fac38b6a06dbfcf1714dc55450bb721d/" alt="Image 2">
+            </div>
+        </div>
+        <!-- Add more alternating content blocks as needed -->
+    </section>
+    <button class="reveal-button" onclick="revealPhoneNumber">Для подробной информации</button>
+    <p id="phone-number">Phone Number: +996 221 15 15 24</p>
+    <div class="footer">
+        &copy; 2023 Bs Travel Company
+    </div>
+</body>
+</html>
